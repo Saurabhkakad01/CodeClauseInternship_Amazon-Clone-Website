@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #232f3e;
+        color: #ffffff;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .product {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 10px;
+        width: 30%;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #ff9900;
+        color: #ffffff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #e68a00;
+      }
+
+      .footer-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #37475a;
+        color: #fff;
+        font-size: 0.875rem;
+        font-weight: 600;
+        height: 60px;
+      }
+
+      .footer-items {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 0 auto;
+        background: #232f3e;
+      }
+
+      .footer-items h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+        margin: 20px 0 10px 0;
+      }
+
+      .footer-items ul {
+        list-style: none;
+        margin-bottom: 20px;
+      }
+
+      .footer-items li a {
+        color: #ddd;
+        font-size: 0.875rem;
+      }
+
+      .footer-items li a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sell</h1>
+    </header>
+
+    <div class="container">
+      <div class="product">
+        <img src="sell1.jpg" alt="img1" />
+        <h2>
+          Sell tech Selfie Stick with Tripod Stand, 3 in 1 Bluetooth Selfie
+          Stick, Suitable for Vlogging
+        </h2>
+        <h1>-50% ₹2,999</h1>
+        <p>M.R.P.: <del> ₹5,999</del></p>
+        <button onclick="addToCart('Selfie Stick with Tripod Stand', 2999)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="sell2.jpg" alt="img2" />
+        <h2>Amazon Basics AAA Alkaline Batteries Pack of 8</h2>
+        <h1>-58% ₹169</h1>
+        <p>M.R.P.: <del> ₹399</del></p>
+        <button onclick="addToCart('Batteries Pack of 8', 169)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="sell3.jpg" alt="img2" />
+        <h2>
+          E-Sell Enterprise, ROCKK Multiport TR30 10 in 1 Type-C USB Hub to 4K
+          HDMI+VGA+Audio 3.5mm+USB3.0 * 3+SD/TF+LAN+100W PD Docking Station for
+          MacBook/Laptop
+        </h2>
+        <h1>-33% ₹5,999</h1>
+        <p>M.R.P.: <del> ₹8,999</del></p>
+        <button onclick="addToCart('ROCKK Multiport TR30 10', 5999)">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+      <a href="#" class="footer-title"> Back to top </a>
+      <div class="footer-items">
+        <ul>
+          <h3>Get to Know Us</h3>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Release</a></li>
+          <li><a href="#">Amazon Science</a></li>
+        </ul>
+        <ul>
+          <h3>Connect with Us</h3>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+        <ul>
+          <h3>Make Money with Us</h3>
+          <li><a href="#">Sell on Amazon</a></li>
+          <li><a href="#">Sell under Amazon Accelerator</a></li>
+          <li><a href="#">Protect and Build Your Brand</a></li>
+          <li><a href="#">Amazon Global Selling</a></li>
+          <li><a href="#">Become an Affiliate</a></li>
+          <li><a href="#">Fulfillment by Amazon</a></li>
+          <li><a href="#">Advertise Your Products</a></li>
+          <li><a href="#">Amazon Pay on Merchants</a></li>
+        </ul>
+        <ul>
+          <h3>Let Us Help You</h3>
+          <li><a href="#">COVID-19 and Amazon</a></li>
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Return Centre</a></li>
+          <li><a href="#">100% Purchase Protection</a></li>
+          <li><a href="#">Amazon App Download</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      function addToCart(productName, price) {
+        // This is where you would implement the actual cart functionality
+        alert(`Added ${productName} to cart. Total: $${price}`);
+      }
+    </script>
+  </body>
+</html>

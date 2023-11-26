@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gift card</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <!-- Custom styles -->
+    <style>
+      .footer-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #37475a;
+        color: #fff;
+        font-size: 0.875rem;
+        font-weight: 600;
+        height: 60px;
+      }
+
+      .footer-items {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 0 auto;
+        background: #232f3e;
+      }
+
+      .footer-items h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+        margin: 20px 0 10px 0;
+      }
+
+      .footer-items ul {
+        list-style: none;
+        margin-bottom: 20px;
+      }
+
+      .footer-items li a {
+        color: #ddd;
+        font-size: 0.875rem;
+      }
+
+      .footer-items li a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="p-3 mb-2 bg-dark text-white">
+      <a class="navbar-brand" href="#">Gift Card</a>
+    </nav>
+
+    <!-- Gift Card Section -->
+    <div class="container mt-5">
+      <h2>Gift Cards</h2>
+      <div class="row">
+        <!-- Gift Card 1 -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="Gift card 1.jpg" class="card-img-top" alt="Gift Card" />
+            <div class="card-body">
+              <h5 class="card-title">
+                Amazon.com Gift Card in a limited-edition Prime van
+              </h5>
+              <p class="card-text">Price: $50.00</p>
+              <button class="btn btn-danger" onclick="purchaseGiftCard(1)">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gift Card 2 -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="Gift card 2.jpg" class="card-img-top" alt="Gift Card" />
+            <div class="card-body">
+              <h5 class="card-title">Amazon.com Print at Home Gift Card</h5>
+              <p class="card-text">Price: $50.00</p>
+              <button class="btn btn-danger" onclick="purchaseGiftCard(2)">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gift Card 3 -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="Gift card 3.jpg" class="card-img-top" alt="Gift Card" />
+            <div class="card-body">
+              <h5 class="card-title">DoorDash eGift Card</h5>
+              <p class="card-text">Price: $75.00</p>
+              <button class="btn btn-danger" onclick="purchaseGiftCard(3)">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+      <a href="#" class="footer-title"> Back to top </a>
+      <div class="footer-items">
+        <ul>
+          <h3>Get to Know Us</h3>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Release</a></li>
+          <li><a href="#">Amazon Science</a></li>
+        </ul>
+        <ul>
+          <h3>Connect with Us</h3>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+        <ul>
+          <h3>Make Money with Us</h3>
+          <li><a href="#">Sell on Amazon</a></li>
+          <li><a href="#">Sell under Amazon Accelerator</a></li>
+          <li><a href="#">Protect and Build Your Brand</a></li>
+          <li><a href="#">Amazon Global Selling</a></li>
+          <li><a href="#">Become an Affiliate</a></li>
+          <li><a href="#">Fulfillment by Amazon</a></li>
+          <li><a href="#">Advertise Your Products</a></li>
+          <li><a href="#">Amazon Pay on Merchants</a></li>
+        </ul>
+        <ul>
+          <h3>Let Us Help You</h3>
+          <li><a href="#">COVID-19 and Amazon</a></li>
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Return Centre</a></li>
+          <li><a href="#">100% Purchase Protection</a></li>
+          <li><a href="#">Amazon App Download</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- JavaScript and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      function purchaseGiftCard(cardId) {
+        alert("Gift Card " + cardId + " purchased!");
+      }
+    </script>
+  </body>
+</html>

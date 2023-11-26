@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Returns & Orders</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .footer-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #37475a;
+        color: #fff;
+        font-size: 0.875rem;
+        font-weight: 600;
+        height: 60px;
+      }
+
+      .footer-items {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 0 auto;
+        background: #232f3e;
+      }
+
+      .footer-items h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+        margin: 20px 0 10px 0;
+      }
+
+      .footer-items ul {
+        list-style: none;
+        margin-bottom: 20px;
+      }
+
+      .footer-items li a {
+        color: #ddd;
+        font-size: 0.875rem;
+      }
+
+      .footer-items li a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="p-3 mb-2 bg-dark text-white">
+      <a class="navbar-brand" href="#">Returns & Orders</a>
+    </nav>
+
+    <!-- Orders section -->
+    <div class="container mt-4">
+      <h2>Your Orders</h2>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h4>Delivered today</h4>
+            <div class="media">
+              <img
+                src="product.jpg"
+                class="mr-3"
+                alt="Product Image"
+                style="width: 100px"
+              />
+              <div class="media-body">
+                <h6 class="mt-0">
+                  <a href="#">
+                    Wesley Milestone 15.6 inch 25 L Casual Waterproof Laptop
+                    Backpack/Office Bag/School Bag/College Bag/Business
+                    Bag/Unisex Travel Backpack</a
+                  >
+                </h6>
+                <p>Order Date: oct 1, 2023</p>
+                <p>Price: ₹399</p>
+                <p>Status: Shipped</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Return section -->
+    <div class="container mt-4">
+      <h2>Return Orders</h2>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5>Upload Return Images</h5>
+            <form id="imageForm">
+              <input type="file" id="imageInput" multiple accept="image/*" />
+              <button
+                type="button"
+                onclick="uploadImages()"
+                class="btn btn-danger"
+              >
+                Upload Images
+              </button>
+            </form>
+            <div id="uploadedImages"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <!-- Footer section -->
+    <footer>
+      <a href="#" class="footer-title"> Back to top </a>
+      <div class="footer-items">
+        <ul>
+          <h3>Get to Know Us</h3>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Release</a></li>
+          <li><a href="#">Amazon Science</a></li>
+        </ul>
+        <ul>
+          <h3>Connect with Us</h3>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+        <ul>
+          <h3>Make Money with Us</h3>
+          <li><a href="#">Sell on Amazon</a></li>
+          <li><a href="#">Sell under Amazon Accelerator</a></li>
+          <li><a href="#">Protect and Build Your Brand</a></li>
+          <li><a href="#">Amazon Global Selling</a></li>
+          <li><a href="#">Become an Affiliate</a></li>
+          <li><a href="#">Fulfillment by Amazon</a></li>
+          <li><a href="#">Advertise Your Products</a></li>
+          <li><a href="#">Amazon Pay on Merchants</a></li>
+        </ul>
+        <ul>
+          <h3>Let Us Help You</h3>
+          <li><a href="#">COVID-19 and Amazon</a></li>
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Return Centre</a></li>
+          <li><a href="#">100% Purchase Protection</a></li>
+          <li><a href="#">Amazon App Download</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- custom JavaScript -->
+    <script>
+      function uploadImages() {
+        var input = document.getElementById("imageInput");
+        var uploadedImagesDiv = document.getElementById("uploadedImages");
+
+        for (var i = 0; i < input.files.length; i++) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            var image = document.createElement("img");
+            image.src = e.target.result;
+            image.className = "img-thumbnail mt-2";
+            uploadedImagesDiv.appendChild(image);
+          };
+
+          reader.readAsDataURL(input.files[i]);
+        }
+
+        input.value = "";
+      }
+    </script>
+  </body>
+</html>
